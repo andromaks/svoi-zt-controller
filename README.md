@@ -62,7 +62,7 @@ iptables -A INPUT -p udp --dport 9993 -j ACCEPT
 
 Дополнительные параметры доступны в документации на  [Zero-ui](https://github.com/dec0dOS/zero-ui) 
 
-Резервное копирование.
+## Резервное копирование.
 просто делаем копию двух директорий и docker-compose.yaml
 
 <pre><code>tar cvf backup-ui.tar data/
