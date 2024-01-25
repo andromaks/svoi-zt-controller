@@ -28,21 +28,23 @@ Zerotier не предоставляет собственный Network Controll
 ## Установка Zero-UI
 
 1. Создаем директорию, где будет распологаться Network Controller.
-   mkdir -p /srv/zero-ui/
-   cd /srv/zero-ui/
+</code></pre>mkdir -p /srv/zero-ui/
+cd /srv/zero-ui/
+</code></pre>
 
 2. Скачиваем docker-compose.yaml
 
-   wget https://raw.githubusercontent.com/dec0dOS/zero-ui/main/docker-compose.yml
-
-   или
+</code><pre> wget https://raw.githubusercontent.com/dec0dOS/zero-ui/main/docker-compose.yml
+</code></pre>
+<p>или</p> 
    
-   curl -L -O https://raw.githubusercontent.com/dec0dOS/zero-ui/main/docker-compose.yml
+</code><pre> curl -L -O https://raw.githubusercontent.com/dec0dOS/zero-ui/main/docker-compose.yml
+</code></pre>
 
-3. Изменяем YOURDOMAIN.com на ваше доменное имя и устанавливаем пароль администратора (ZU_DEFAULT_PASSWORD) в docker-compose.yml
-4. Скачиваем докер имидж
+4. Изменяем YOURDOMAIN.com на ваше доменное имя и устанавливаем пароль администратора (ZU_DEFAULT_PASSWORD) в docker-compose.yml
+5. Скачиваем докер имидж
    docker pull dec0dos/zero-ui
-5. Разрешаем порты на фаерволе
+6. Разрешаем порты на фаерволе
 <p>или при помощи ufw</p> 
 <pre><code>ufw allow 80/tcp
 ufw allow 443/tcp
