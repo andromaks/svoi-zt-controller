@@ -8,14 +8,14 @@ Zerotier не предоставляет собственный Network Controll
 Будем расмматривать сторонние решения.
 В данном документе рассмотрим [Zero-ui](https://github.com/dec0dOS/zero-ui) 
 
-Преимущества:
+***Преимущества:***
 - устанавливается в Docker
 - минимальные требования к инфраструктуре
 - встроенная поддержка для создания https сертификатов на web интерфейсе
 - удобный backup и перенос на другой сервер
 - нет ограничений на количество подключаемых нод и количество создаваемых сетей.
 
-Недостатки
+***Недостатки:***
 - Нет полной совметсимости по сервисам с оригинальным Zerotier
 - поддерживает только IPv4
 - Поддердживает только одного администратора
@@ -47,15 +47,15 @@ cd /srv/zero-ui/
 ```
     docker pull dec0dos/zero-ui
 ```
-6. Разрешаем порты на фаерволе
-<p>при помощи ufw</p> 
+5. Разрешаем порты на фаерволе
+<p>    при помощи ufw</p> 
 
 ```
     ufw allow 80/tcp
     ufw allow 443/tcp
     ufw allow 9993/udp
 ```
-<p>или при помощи iptables</p>
+<p>    или при помощи iptables</p>
 
 ```
     iptables -A INPUT -p tcp --dport 80 -j ACCEPT
@@ -63,16 +63,16 @@ cd /srv/zero-ui/
     iptables -A INPUT -p udp --dport 9993 -j ACCEPT
 ```
 
-7. Запускаем контейнер
+6. Запускаем контейнер
 ```
    docker-compose up -d --no-build
 ```
-8. Проверяем что все работает без ошибок (Control-C остновить просмотр логов)
+7. Проверяем что все работает без ошибок (Control-C остновить просмотр логов)
 ```
     docker-compose logs -f
 ```
 
-10. Идем на https://ваш_домен.ru/app/. Заходим в Network Сontroller *`login:admin`* пароль: то, что написано в _`ZU_DEFAULT_PASSWORD`_.
+8. Идем на https://ваш_домен.ru/app/. Заходим в Network Сontroller *`login:admin`* пароль: то, что написано в _`ZU_DEFAULT_PASSWORD`_.
 
 Дополнительные параметры доступны в документации на  [Zero-ui](https://github.com/dec0dOS/zero-ui) 
 
@@ -80,9 +80,9 @@ cd /srv/zero-ui/
 просто делаем копию двух директорий и docker-compose.yaml
 
 ```
-tar cvf backup-ui.tar data/
-tar cvf backup-zt.tar zerotier-one/
-cp docker-compose.yaml docker-compose.yaml.backup
+    tar cvf backup-ui.tar data/
+    tar cvf backup-zt.tar zerotier-one/
+    cp docker-compose.yaml docker-compose.yaml.backup
 ```
 
 При наличии `backup-ui.tar backup-zt.tar и docker-compose.yaml.backup` Network Controller переносится на любой другой docker хост.
@@ -90,4 +90,4 @@ cp docker-compose.yaml docker-compose.yaml.backup
 
 ## Собственный Network Controller работает.
 
-### Варианты настройек Zerotier сетей смотрите в видео [Виртуальные сети в Zerotier](https://www.youtube.com/watch?v=MjI1h7IJQsQ)
+#### Варианты настройек Zerotier сетей смотрите в видео [Виртуальные сети в Zerotier](https://www.youtube.com/watch?v=MjI1h7IJQsQ)
