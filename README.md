@@ -1,5 +1,5 @@
 # Разворачиваем собственный Network Controller для Zerotier
-Видео об этом процессе доступно по ссылке
+Видео об этом процессе доступно по ссылке [Ссылка на Youtube](https://youtu.be/gweI-9UQsaU)
 
 На сайте [docs.zerotier.com ](https://docs.zerotier.com/what-is-a-controller) доступна документация по Network Controller.
 Описание поддерживаемых http запросов.
