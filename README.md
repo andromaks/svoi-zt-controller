@@ -65,11 +65,11 @@ cd /srv/zero-ui/
 
 6. Запускаем контейнер
 ```
-   docker-compose up -d --no-build
+   docker compose up -d --no-build
 ```
 7. Проверяем что все работает без ошибок (Control-C остновить просмотр логов)
 ```
-    docker-compose logs -f
+    docker compose logs -f
 ```
 
 8. Идем на https://ваш_домен.ru/app/. Заходим в Network Сontroller *`login:admin`* пароль: то, что написано в _`ZU_DEFAULT_PASSWORD`_.
